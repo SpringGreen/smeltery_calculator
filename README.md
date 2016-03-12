@@ -1,4 +1,4 @@
-# smeltery_calculator
+# Tinkers construct smeltery calculator
 Tinkers construct smeltery calculator
 
 This calculator will help you calculate the resources needed for your Tinkers construct smeltery.
