@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang='en' ng-app='calculatorApp'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='description' content='Tinkers construct smeltery calculator'>
+        <meta name='author' content='SpringGreen.nl'>
+
+        <title>Tinkers construct smeltery calculator</title>
+
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
+    </head>
+
+    <body ng-controller='CalculatorController'>
+        <div class='container'>
+            <div class='header clearfix'>
+                <h3 class='text-muted'>Tinkers construct smeltery calculator</h3>
+            </div>
+
+            <div class='jumbotron'>
+                <h1>Calculator</h1>
+
+                <div class='row'>
+
+                    <div class='col-md-6'>
+                        <h3>Essentials</h3>
+
+                        <div class='form-group'>
+                            <label for='controllers'>Controllers</label>
+                            <input type='text' class='form-control' id='controllers' ng-model='controllers' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='tanks'>Tanks</label>
+                            <input type='text' class='form-control' id='tanks' ng-model='tanks' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='drains'>Drains</label>
+                            <input type='text' class='form-control' id='drains' ng-model='drains' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='faucets'>Faucets</label>
+                            <input type='text' class='form-control' id='faucets' ng-model='faucets' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='basins'>Basins</label>
+                            <input type='text' class='form-control' id='basins' ng-model='basins' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='tables'>Tables</label>
+                            <input type='text' class='form-control' id='tables' ng-model='tables' ng-change='calculate()' value='1' />
+                        </div>
+                    </div>
+
+                    <div class='col-md-6'>
+                        <h3>Center area</h3>
+
+                        <div class='form-group'>
+                            <label for='width'>Width</label>
+                            <input type='text' class='form-control' id='width' ng-model='width' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='depth'>Depth</label>
+                            <input type='text' class='form-control' id='depth' ng-model='depth' ng-change='calculate()' value='1' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='height'>Height of the sides</label>
+                            <input type='text' class='form-control' id='height' ng-model='height' ng-change='calculate()' value='1' />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class='row'>
+                    <h1>Results</h1>
+
+                    <div>Blocks: {{blocks}}</div>
+                    <div>Bricks: {{bricks}}</div>
+                    <div>Sand: {{sand}}</div>
+                    <div>Gravel: {{gravel}}</div>
+                    <div>Clay: {{clay}}</div>
+                </div>
+            </div>
+
+
+
+            <footer class='footer'>
+                <p>&copy; 2016 SpringGreen. Based on the idea of <a href='https://www.reddit.com/user/AKTheKnight'>/u/AKTheKnight</a>, web version by <a href='https://www.reddit.com/user/Hexterity'>/u/Hexterity</a></p>
+            </footer>
+
+        </div>
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js'></script>
+        <script src='calculator.js'></script>
+
+    </body>
+</html>
