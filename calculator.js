@@ -5,6 +5,8 @@ angular.module('calculatorApp', [])
 
     $scope.controllers = 1;
     $scope.tanks = 1;
+    $scope.seared_glass = 0;
+    $scope.seared_windows = 0;
     $scope.drains = 1;
     $scope.faucets = 1;
     $scope.basins = 1;
@@ -18,6 +20,8 @@ angular.module('calculatorApp', [])
 
         controllerNum = $this.getNumber($scope.controllers);
         tankNum = $this.getNumber($scope.tanks);
+        searedGlassNum = $this.getNumber($scope.seared_glass);
+        searedWindowNum = $this.getNumber($scope.seared_windows);
         drainNum = $this.getNumber($scope.drains);
         faucetNum = $this.getNumber($scope.faucets);
         basinNum = $this.getNumber($scope.basins);
@@ -31,10 +35,13 @@ angular.module('calculatorApp', [])
         blocks += 2 * widthNum * heightNum;
         blocks += 2 * depthNum * heightNum;
         blocks -= (controllerNum + tankNum + drainNum);
+        blocks -= (searedGlassNum + searedWindowNum);
 
         bricks = blocks * 4;
         bricks += controllerNum * 8;
-        bricks += tankNum + 8;
+        bricks += tankNum * 8;
+        bricks += searedGlassNum * 4;
+        bricks += searedWindowNum * 6;
         bricks += drainNum * 6;
         bricks += faucetNum * 3;
         bricks += basinNum * 7;
@@ -42,6 +49,8 @@ angular.module('calculatorApp', [])
 
         sand = tankNum;
         sand += Math.ceil(bricks / 2);
+        sand += searedGlassNum * 5;
+        sand += searedWindowNum * 3;
 
         gravel = Math.ceil(bricks / 2);
 
