@@ -35,11 +35,13 @@ angular.module('calculatorApp', [])
         blocks += 2 * widthNum * heightNum;
         blocks += 2 * depthNum * heightNum;
         blocks -= (controllerNum + tankNum + drainNum);
+        blocks -= (searedGlassNum + searedWindowNum);
 
         bricks = blocks * 4;
         bricks += controllerNum * 8;
         bricks += tankNum * 8;
-        bricks += searedWindowNum * 2;
+        bricks += searedGlassNum * 4;
+        bricks += searedWindowNum * 6;
         bricks += drainNum * 6;
         bricks += faucetNum * 3;
         bricks += basinNum * 7;
